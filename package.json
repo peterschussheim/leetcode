@@ -1,0 +1,12 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/peterschussheim/leetcode.git",
+  "author": "Peter Schussheim <peter@schussheim.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^3.18.0",
+    "prettier-eslint": "^4.3.2"
+  }
+}
