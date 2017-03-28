@@ -14,7 +14,6 @@ const complexNumberMultiply = (a, b) => {
 
   [a, b] = m.replace('i', '').split('+')
   let parsed = parseInt(a)
-  console.log(parsed);
   let [c, d] = n.replace('i', '').split('+')
   return [...[a, b], ...[c, d]]
   // return (coef[0] * coef[2] - coef[1] * coef[3]) + '+' + (coef[1] * coef[2] + coef[0] * coef[3]) + 'i'
