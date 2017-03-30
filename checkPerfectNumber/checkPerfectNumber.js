@@ -33,5 +33,5 @@ const checkPerfectNumber = num => {
 
 // checkPerfectNumber(0)
 // checkPerfectNumber(6)
-// console.log(checkPerfectNumber(28))
+console.log(checkPerfectNumber(28))
 console.log(checkPerfectNumber(99999991));
