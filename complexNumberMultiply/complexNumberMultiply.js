@@ -14,8 +14,9 @@ const complexNumberMultiply = (a, b) => {
 
   [a, b] = m.replace('i', '').split('+')
   let parsed = parseInt(a)
-  let [c, d] = n.replace('i', '').split('+')
-  return [...[a, b], ...[c, d]]
+  let nd = n.replace('i', '').split('+')
+  console.log(nd);
+  // return [...[a, b], ...[c, d]]
   // return (coef[0] * coef[2] - coef[1] * coef[3]) + '+' + (coef[1] * coef[2] + coef[0] * coef[3]) + 'i'
 }
 
@@ -23,4 +24,4 @@ const complexNumberMultiply = (a, b) => {
 let test1 = complexNumberMultiply('1+1i', '1+1i') // '0+2i'
 let test2 = complexNumberMultiply('1+-1i', '1+-1i') // '0+-2i'
 
-console.log(test1)
+test1
