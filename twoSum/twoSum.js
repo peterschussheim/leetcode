@@ -5,25 +5,17 @@
  */
 
 const twoSum = (nums, target) => {
-  // init hashtable = {}
-  // hashtable[key] = nums[i], hashtable value = index of nums[i]
-  let hashTable = {}
+  let map = {}
   let result = []
-  // iterate over nums
-  for (let num of nums) {
-    // create space numToFind = target - nums[i]
-    let numToFind = target - num
-    console.log(numToFind)
-    // if numToFind exists in hashtable return numToFind
-    if (hashTable[numToFind]) {
-      // result.push(hashtable[numToFind])
-      result.push(hashTable[numToFind])
-      // result.push(i)
-      result.push(num)
-      // break
+  for (let i = 0; i < nums.length; i++) {
+    let val = nums[i]
+    let numToFind = target - val
+    if (numToFind in map) {
+      result.push(map[numToFind])
+      result.push(i)
+      break
     } else {
-      // if not found, add nums[i] to hashmap
-      hashTable[num]
+      map[val] = i
     }
   }
   return result
