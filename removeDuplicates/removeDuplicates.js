@@ -25,7 +25,7 @@ const removeDuplicates = nums => {
     if (nums[i] !== current) {
       j++
       nums[j] = nums[i]
-      cur = nums[i]
+      current = nums[i]
     }
   }
   return j + 1
