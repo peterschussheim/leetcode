@@ -11,37 +11,37 @@ Your function should return length = 2, with the first two elements of nums bein
 
 */
 
-const removeDuplicates = nums => {
-  let length = nums.length
-  let i, j, current
+// const removeDuplicates = nums => {
+//   let length = nums.length
+//   let i, j, current
 
-  if (length === 0) {
-    return 0
-  }
+//   if (length === 0) {
+//     return 0
+//   }
 
-  current = nums[0]
+//   current = nums[0]
 
-  for ((i = 0), (j = 0); i < length; i++) {
-    if (nums[i] !== current) {
-      j++
-      nums[j] = nums[i]
-      current = nums[i]
-    }
-  }
-  return j + 1
-}
+//   for ((i = 0), (j = 0); i < length; i++) {
+//     if (nums[i] !== current) {
+//       j++
+//       nums[j] = nums[i]
+//       current = nums[i]
+//     }
+//   }
+//   return j + 1
+// }
 
-const removeDuplicates = nums => {
-  for (let i = 0; i < nums.length; i++) {
-    // next num is identical to current num
-    if (nums[i] === nums[i + 1]) {
-      nums.splice(i, 1)
-      i--
-    }
-  }
-  return nums.length
-}
+// const removeDuplicates = nums => {
+//   for (let i = 0; i < nums.length; i++) {
+//     // next num is identical to current num
+//     if (nums[i] === nums[i + 1]) {
+//       nums.splice(i, 1)
+//       i--
+//     }
+//   }
+//   return nums.length
+// }
 
-// const removeDuplicates = nums => Array.from(new Set(nums)).length;
+const removeDuplicates = nums => Array.from(new Set(nums)).length;
 
 console.log(removeDuplicates([1, 1, 2]))
