@@ -24,9 +24,8 @@ const map = {
   M: 1000
 }
 
-const intToRoman = num => {
-  
-}
+const intToRoman = num => {}
+
 
 let test = intToRoman(1)
 let test2 = intToRoman(621)
