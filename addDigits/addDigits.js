@@ -1,5 +1,5 @@
 /*
-  Given a non-negative integer num, repeatedly add all its digits until the result has only one digit.
+  Given a non-negative integer num, repeatedly add all its digits until the sum has only one digit.
 
   For example:
     Given num = 38, the process is like:
@@ -14,15 +14,12 @@
  * @param {number} num
  * @return {number}
  */
-const addDigits = num => {
-  const result = num.toString(10).split('').reduce((prev, curr, currIdx) => {
-    while (++currIdx) {
-      currIdx
-      return Number(prev) + Number(curr)
-    }
-  })
-  return result
-}
+
+const addDigits = num => num === 0
+  ? 0
+  : num % 9 === 0
+    ? 9
+    : num % 9
 
 const test1 = addDigits(38)
 test1
