@@ -13,14 +13,20 @@ The maximum depth is the number of nodes along the longest path from the root no
  * @returns {number}
  */
 
-const maxDepth = root => {
-  // function findGreater(a, b) {
-  //   return a > b ? a : b;
-  // }
-  if (root === null) {
-    return 0;
-  }
-  Math.max(maxDepth(root.left), maxDepth(root.right)) + 1;
+function TreeNode(val) {
+  this.val = val
+  this.left = (this.right = null)
 }
 
-export default maxDepth
+var maxDepth = function(root) {
+  if (root === null) {
+    return 0
+  }
+  function findGreater(a, b) {
+    return a > b ? a : b
+  }
+  findGreater(maxDepth(root.left), maxDepth(root.right)) + 1
+}
+
+let test = maxDepth([0])
+// export default maxDepth
