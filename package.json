@@ -6,7 +6,9 @@
   "author": "Peter Schussheim <peter@schussheim.com>",
   "license": "MIT",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "build": "babel -d lib/",
+    "prepublish": "yarn run build"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
