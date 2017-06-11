@@ -7,8 +7,10 @@
 
 const generatePalindromes = s => {
   let set = new Set()
-  let permutations = new Map()
-  let st = Array.from(s.length / 2)
+  let permutations = {}
+  let st = Array.from(s)
+  let length = st.length
+  length
   let char = 0
   let k = 0
   if (!canPermutePalindrome(s, permutations)) {
@@ -58,4 +60,13 @@ function permute(s, l, char) {
   }
 }
 
-export default generatePalindromes
+// const string = 'abc' // should return an empty array
+// let result = generatePalindromes(string)
+// result
+
+const string2 = 'aabb'
+// const target = ['abba', 'baab']
+let result2 = generatePalindromes(string2)
+result2
+
+module.exports = generatePalindromes

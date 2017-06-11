@@ -1,7 +1,7 @@
 /*eslint no-undef: 0*/
 /*eslint-env node*/
 
-import generatePalindromes from './palindromePermutation2'
+const generatePalindromes = require('./palindromePermutation2')
 
 describe('generatePalindromes', () => {
   test('Returns an empty Array if no palindromic permutations are found', () => {
