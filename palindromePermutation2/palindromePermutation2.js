@@ -5,4 +5,7 @@
  * @return {string[]}
  */
 
-var generatePalindromes = function(s: string) {}
+const generatePalindromes = function(s: string) {}
+
+
+export default generatePalindromes
