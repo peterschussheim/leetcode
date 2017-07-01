@@ -28,5 +28,6 @@ var maxDepth = function(root) {
   findGreater(maxDepth(root.left), maxDepth(root.right)) + 1
 }
 
-let test = maxDepth([0])
+let test = new TreeNode(0)
+console.log(test)
 // export default maxDepth
