@@ -28,18 +28,20 @@
  */
 
 const fizzBuzz = n => {
+  let result = []
   for (let i = 1; i <= n; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
-      console.log('FizzBuzz')
+      result.push('FizzBuzz')
     } else if (i % 3 === 0) {
-      console.log('Fizz')
+      result.push('Fizz')
     } else if (i % 5 === 0) {
-      console.log('Buzz')
+      result.push('Buzz')
     } else {
-      console.log(i.toString())
+      result.push(i.toString())
     }
   }
+  return result
 }
 
-fizzBuzz(100)
-
+let fifteen = fizzBuzz(15)
+fifteen
