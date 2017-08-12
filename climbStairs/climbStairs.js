@@ -11,10 +11,9 @@
  * @param {number} n
  * @return {number}
  */
-
-const climbStairs = n => {
+const climbStairs = (n: number): number => {
   let stepsRemaining = n
-  let total
+  let total: number
   if (stepsRemaining === 1) return total
   while (stepsRemaining > 0) {}
 }
