@@ -1,10 +1,11 @@
+/* @flow */
 /**
  * @param {string} s
  * @param {string} t
  * @return {character}
  */
 
-Set.prototype.difference = function(setB) {
+Set.prototype.difference = function(setB: Set<string>) {
   let difference = new Set(this)
   for (var elem of setB) {
     difference.delete(elem)
@@ -12,12 +13,12 @@ Set.prototype.difference = function(setB) {
   return [...difference].join()
 }
 
-var findTheDifference = function(s, t) {
+const findTheDifference = (s: string, t: string): string => {
   let setA = new Set(s) /*?*/
   let setB = new Set(t) /*?*/
 
   if (setA.has(setB)) {
-    return setB
+    return [setB].join('')
   }
 
   let differenceOfAB = setB.difference(setA)
