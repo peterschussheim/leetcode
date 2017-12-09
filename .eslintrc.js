@@ -1,28 +1,15 @@
 module.exports = {
-    "env": {
-        "browser": true,
-        "es6": true,
-        "node": true
-    },
-    "parserOptions": {
-        "sourceType": "module"
-    },
-    "rules": {
-        "indent": [
-            "error",
-            2
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "semi": [
-            "error",
-            "never"
-        ]
-    }
-};
+  env: {
+    browser: true,
+    es6: true,
+    node: true
+  },
+  extends: ['plugin:flowtype/recommended', 'prettier', 'prettier/flowtype'],
+  plugins: ['babel', 'flowtype', 'prettier'],
+  parserOptions: {
+    sourceType: 'module'
+  },
+  rules: {
+    'prettier/prettier': 'error'
+  }
+}
